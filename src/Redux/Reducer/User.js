@@ -6,7 +6,7 @@ export const initialState = {
 }
 
 const User = (state = initialState, action) => {
-    console.log(state);
+   
     switch(action.type){
         case ACTION.LOGIN:
             return {

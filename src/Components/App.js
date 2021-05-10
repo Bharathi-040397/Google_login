@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { BrowserRouter as Router, Route, Switch,useHistory,withRouter} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 import Login from '../Components/Login/Login'
@@ -10,7 +10,7 @@ import Checkout from './Checkout'
 
 function App() {
   const { user } = useSelector(state => state.user);
-  const history = useHistory();
+
 
  useEffect(() => {
   if (!user) {

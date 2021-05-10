@@ -4,7 +4,6 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 import CurrencyFormat from 'react-currency-format';
 import '../Css/Cart.css'
 import Header from '../Components/Common/Header'
-import Footer from '../Components/Common/Footer'
 import { getTotal } from '../Redux/Reducer/Cart'
 import { Link } from 'react-router-dom'
 
@@ -30,9 +29,9 @@ function Checkout() {
               <h5 className="check_title">Products</h5>
             </div>
             <div className="col col-sm-12 col-md-8">
-            {cart.map((c,i) => (
-        <div key={i} className="col-12 mb-4">
-             <div className="cart_product">
+            {cart.map((c,index) => (
+        <div key={index} className="col-12 mb-4">
+             <div key={index} className="cart_product">
             <img className="cart_img" alt="" src={c.img} />
             <div className="cart_info">
                 <p>{c.title}</p>
@@ -42,7 +41,7 @@ function Checkout() {
                 </p>
                 <div className='cart_rating'>
                     {Array(c.rating).fill().map((_, i) => {
-                        return <StarBorderIcon className="star"/>
+                        return <StarBorderIcon key={i} className="star"/>
                     })}
                 </div>
             </div>

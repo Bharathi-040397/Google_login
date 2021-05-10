@@ -6,7 +6,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import { removeCart} from '../Redux/Action/Cart'
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import Header from '../Components/Common/Header'
-import Footer from '../Components/Common/Footer'
 import {getTotal} from '../Redux/Reducer/Cart'
 
 function Cart() {
@@ -33,9 +32,9 @@ function Cart() {
    <div className="container-fluid">
  <div className="row center padding " style={{ height:'100vh'}}>
  
-      {cart.map((c,i) => (
-        <div key={i} className="col-12 mb-4">
-             <div className="cart_product">
+      {cart.map((c,index) => (
+        <div key={index} className="col-12 mb-4">
+              <div key={index} className="cart_product">
             <img className="cart_img" alt="" src={c.img} />
             <div className="cart_info">
                 <p>{c.title}</p>
@@ -45,7 +44,7 @@ function Cart() {
                 </p>
                 <div className='cart_rating'>
                     {Array(c.rating).fill().map((_, i) => {
-                        return <StarBorderIcon className="star"/>
+                        return <StarBorderIcon key={i} className="star"/>
                     })}
                 </div>
             <button className="remove_btn" onClick={()=>removecart(c.title)}>Remove</button>
