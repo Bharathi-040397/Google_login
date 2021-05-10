@@ -14,7 +14,7 @@ function App() {
 
  useEffect(() => {
   if (!user) {
-    window.location.pathnae="/"
+    window.location.pathname="/"
   }
  }, [user])
   
