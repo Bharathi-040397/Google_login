@@ -1,0 +1,126 @@
+.cart_product
+{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    max-width: 1100px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 0.5rem;
+}
+.cart_info
+{
+    
+    padding-left: 20px;
+    flex:1;
+
+}
+.cart_info p{
+    font-size: 18px;
+}
+.cart_img
+{
+    margin-right: 2px;
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+}
+.cart_price
+{
+ font-size: 25px;
+color:teal;
+display: flex;
+align-items: center;
+}
+.remove_btn
+{
+   background: linear-gradient(270deg, #FE6B8B 0%, #AB205B 100%);
+    border: 1px solid #BC204E;
+    border-radius: 40px;
+    color:#FFFFFF;
+    font-weight: 500;
+    padding:5px 10px;
+    max-width: 400px;
+    font-size: 15px;
+    margin-top: 1rem;
+}
+.remove_btn:hover{
+    opacity: 0.8;
+}
+.subtotal
+{
+    background-color: white;
+    box-shadow: 2px 2px 10px rgb(241, 227, 227);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.total_heading{
+    font-size: 20px;
+    font-size: 800;
+}
+.total_gift
+{
+    display: flex;
+    align-items: center;;
+
+}
+.totalcheck
+{
+ margin-top: 3px;
+ margin-right: 6px;
+   
+}
+.checkout{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgb(189, 188, 188);
+}
+.check_title{
+    color: #797979;
+    font-size: 16px!important;
+}
+@media only screen and(max-width:600px){
+    .cart_product{
+        flex-direction: column!important
+    }
+    .cart_img{
+        width:50px;
+        height:50px;
+        flex: 0.5;
+    }
+    .cart_info
+    {
+    padding-left: 5px;
+    flex: 0.5;
+}
+.cart_info p{
+    font-size: 15px;
+}
+.check_title{
+    font-size: 12px!important;
+}
+}
+@media only screen and(max-width:300px){
+    .checkout .cart_product{
+        flex-direction: column!important
+    }
+    .checkout .cart_img{
+        width:20px;
+        height:20px;
+    }
+    .checkout .cart_info
+    {
+    padding-left: 5px;
+}
+.checckout .cart_info p{
+    font-size: 10px;
+}
+.check_title{
+    font-size: 12px!important;
+}
+}
+
